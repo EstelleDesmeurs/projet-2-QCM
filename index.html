@@ -2,62 +2,180 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="foundation.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>QCM</title>
 </head>
+
 <body>
-<form action="resultat.php" method="post">
- <h1>Message bienvenue</h1>
-  
+   <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          <h1>Message bienvenue</h1>
+          </div>
+        </div>
+        
+        
+        <div class="row">
+          <div class="col-md-12">
+              <form action="resultat.php" method="post">
+              
 <label for="name">Votre nom : </label><input type="text" name="name" id="name"><br>
 
-<ol>
-    <li><label for="Q1">Comment ajouter une étiquette à un input ?</label></li>
-            <input type="radio" name="R1" value="1.A" id="1.A"><label for="1.A">&lt;label&gt;</label><br>
-            <input type="radio" name="R1" value="T1.B" id="1.B"><label for="1.B">&lt;label for="element_id"&gt;</label><br>
-            <input type="radio" name="R1" value="1.C" id="1.C"><label for="1.C">&lt;label to="element_id"&gt;</label><br><hr>   
-    <li><label for="Q2">Quel balise permet d'envoyer un formulaire ?</label></li>
-            <input type="radio" name="R2" value="T2.A" id="2.A"><label for="2.A">&lt;input type="submit"&gt;</label><br>
-            <input type="radio" name="R2" value="2.B" id="2.B"><label for="2.B">&lt;button type="submit"&gt;&lt;/button&gt;</label><br>
-            <input type="radio" name="R2" value="2.C" id="2.C"><label for="2.C">&lt;send&gt;</label><br><hr>    
-    <li><label for="Q3">Dans quoi définit-on les déclarations CSS ?</label></li>
-            <input type="radio" name="R3" value="3.A" id="3.A"><label for="3.A">Entre deux crochets sépareés par des tirets [ ... - ... ]</label><br>
-            <input type="radio" name="R3" value="3.B" id="3.B"><label for="3.B">Entre deux guillemets séparées par des slashs " ... / ... "</label><br>
-            <input type="radio" name="R3" value="T3.C" id="3.C"><label for="3.C">Entre deux accolades séparés par des points-virgules { ... ; ... }</label><br><hr>
-<!--        
-    <li><label for="Q4">Comment indique-t-on un commentaire en PHP?</label></li>
-            <input type="radio" name="R4" value="T4.A" id="4.A"><label for="3.A">// Ceci est un commentaire</label><br>
-            <input type="radio" name="R4" value="4.B" id="4.B"><label for="3.A">* Ceci est un commentaire *</label><br>
-            <input type="radio" name="R4" value="4.C" id="4.C"><label for="3.A">*/ Ceci est un commentaire /*</label><br><hr>
-    <li><label for="Q5">Le code PHP doit se trouver à l'intérieur de balises spécifiques. Lesquelles?</label></li>
-            <input type="radio" name="R5" value="5.A" id="5.A"><label for="3.A">&lt;?php&gt;...&lt;/?&gt;</label><br>
-            <input type="radio" name="R5" value="5.B" id="5.B"><label for="3.A">&lt;script&gt;...&lt;/script&gt;</label><br>
-            <input type="radio" name="R5" value="T5.C" id="5.C"><label for="3.A">&lt;?php ... ?&gt;</label><br><hr>
-    <li><label for="Q6">A quoi sert le langage CSS ?</label></li>
-            <input type="radio" name="R6" value="6.A" id="6.A"><label for="3.A">A réaliser des pages dynamiques</label><br>
-            <input type="radio" name="R6" value="T6.B" id="6.B"><label for="3.A">A ajouter du style aux documents web</label><br>
-            <input type="radio" name="R6" value="6.C" id="6.C"><label for="3.A">A insérer du contenu dans une page internet</label><br><hr>
-    <li><label for="Q7">Que signifie CSS ?</label></li>
-            <input type="radio" name="R7" value="T7.A" id="7.A"><label for="3.A">Cascading Style Sheets</label><br>
-            <input type="radio" name="R7" value="7.B" id="7.B"><label for="3.A">Create Simple Samples</label><br>
-            <input type="radio" name="R7" value="7.C" id="7.C"><label for="3.A">Choucroute et Saucisses d'Alsace</label><br><hr>
-    <li><label for="Q8">Dans le cas d'envoi d'informations plus ou moins sensibles par formulaire, quelle méthode utilisera-t-on de préférence ?</label></li>
-            <input type="radio" name="R8" value="8.A" id="8.A"><label for="3.A">get</label><br>
-            <input type="radio" name="R8" value="8.B" id="8.B"><label for="3.A">mailto</label><br>
-            <input type="radio" name="R8" value="T8.C" id="8.C"><label for="3.A">post</label><br><hr>                    
-    <li><label for="Q9">Quel est la bonne proposition pour demander le sexe d'un personne ?</label></li>
-            <input type="radio" name="R9" value="T9.A" id="9.A"><label for="3.A">&lt;input type="radio"&gt;</label><br>
-            <input type="radio" name="R9" value="9.B" id="9.B"><label for="3.A">&lt;input type="checkbox"&gt;</label><br>
-            <input type="radio" name="R9" value="9.C" id="9.C"><label for="3.A">&lt;select&gt;</label><br><hr>
-    <li><label for="Q10">Quel balise permet de faire une liste deroulante ?</label></li>
-            <input type="radio" name="R10" value="10.A" id="10.A"><label for="3.A">&lt;input&gt;</label><br>
-            <input type="radio" name="R10" value="T10.B" id="10.B"><label for="3.A">&lt;select&gt;</label><br>
-            <input type="radio" name="R10" value="10.C" id="10.C"><label for="3.A">&lt;start&gt;</label><br> 
-</ol>
- --> 
+<label for="Q1">1. Comment ajouter une étiquette à un input ?</label>
+    <input type="radio" name="R1" value="1.A" id="1.A">
+        <label for="1.A">&lt;label&gt;</label><br>
+    <input type="radio" name="R1" value="Correct" id="1.B">
+        <label for="1.B">&lt;label for="element_id"&gt;</label><br>
+    <input type="radio" name="R1" value="1.C" id="1.C">
+        <label for="1.C">&lt;label to="element_id"&gt;</label><br><hr>   
+<label for="Q2">2. Quelle balise permet d'envoyer un formulaire ?</label>
+    <input type="radio" name="R2" value="Correct" id="2.A">
+        <label for="2.A">&lt;input type="submit"&gt;</label><br>
+    <input type="radio" name="R2" value="2.B" id="2.B">
+        <label for="2.B">&lt;button type="submit"&gt;&lt;/button&gt;</label><br>
+    <input type="radio" name="R2" value="2.C" id="2.C">
+        <label for="2.C">&lt;send&gt;</label><br><hr>    
+<label for="Q3">3. Dans quoi définit-on les déclarations CSS ?</label>
+    <input type="radio" name="R3" value="3.A" id="3.A">
+        <label for="3.A">Entre deux crochets sépareés par des tirets [ ... - ... ]</label><br>
+    <input type="radio" name="R3" value="3.B" id="3.B">
+        <label for="3.B">Entre deux guillemets séparées par des slashs " ... / ... "</label><br>
+    <input type="radio" name="R3" value="Correct" id="3.C">
+        <label for="3.C">Entre deux accolades séparés par des points-virgules { ... ; ... }</label><br><hr>  
+<label for="Q4">4. Comment indique-t-on un commentaire en PHP?</label>
+    <input type="radio" name="R4" value="Correct" id="4.A">
+        <label for="3.A">// Ceci est un commentaire</label><br>
+    <input type="radio" name="R4" value="4.B" id="4.B">
+        <label for="3.A">* Ceci est un commentaire *</label><br>
+    <input type="radio" name="R4" value="4.C" id="4.C">
+        <label for="3.A">*/ Ceci est un commentaire /*</label><br><hr>
+<label for="Q5">5. Le code PHP doit se trouver à l'intérieur de balises spécifiques. Lesquelles?</label>
+    <input type="radio" name="R5" value="5.A" id="5.A">
+        <label for="3.A">&lt;?php&gt;...&lt;/?&gt;</label><br>
+    <input type="radio" name="R5" value="5.B" id="5.B">
+        <label for="3.A">&lt;script&gt;...&lt;/script&gt;</label><br>
+    <input type="radio" name="R5" value="Correct" id="5.C">
+        <label for="3.A">&lt;?php ... ?&gt;</label><br><hr>
+<label for="Q6">6. A quoi sert le langage CSS ?</label>
+    <input type="radio" name="R6" value="6.A" id="6.A">
+        <label for="3.A">A réaliser des pages dynamiques</label><br>
+    <input type="radio" name="R6" value="Correct" id="6.B">
+        <label for="3.A">A ajouter du style aux documents web</label><br>
+    <input type="radio" name="R6" value="6.C" id="6.C">
+        <label for="3.A">A insérer du contenu dans une page internet</label><br><hr>
+<label for="Q7">7. Que signifie CSS ?</label>
+    <input type="radio" name="R7" value="Correct" id="7.A">
+        <label for="3.A">Cascading Style Sheets</label><br>
+    <input type="radio" name="R7" value="7.B" id="7.B">
+        <label for="3.A">Create Simple Samples</label><br>
+    <input type="radio" name="R7" value="7.C" id="7.C">
+        <label for="3.A">Choucroute et Saucisses d'Alsace</label><br><hr>
+<label for="Q8">8. Dans le cas d'envoi d'informations plus ou moins sensibles par formulaire, quelle méthode utilisera-t-on de préférence ?</label>
+    <input type="radio" name="R8" value="8.A" id="8.A">
+        <label for="3.A">get</label><br>
+    <input type="radio" name="R8" value="8.B" id="8.B">
+        <label for="3.A">mailto</label><br>
+    <input type="radio" name="R8" value="Correct" id="8.C">
+        <label for="3.A">post</label><br><hr>                    
+<label for="Q9">9. Quelle est la bonne proposition pour demander le sexe d'un personne ?</label>
+    <input type="radio" name="R9" value="Correct" id="9.A">
+        <label for="3.A">&lt;input type="radio"&gt;</label><br>
+    <input type="radio" name="R9" value="9.B" id="9.B">
+        <label for="3.A">&lt;input type="checkbox"&gt;</label><br>
+    <input type="radio" name="R9" value="9.C" id="9.C">
+        <label for="3.A">&lt;select&gt;</label><br><hr>
+<label for="Q10">10. Quelle balise permet de faire une liste deroulante ?</label>
+    <input type="radio" name="R10" value="10.A" id="10.A">
+        <label for="3.A">&lt;input&gt;</label><br>
+    <input type="radio" name="R10" value="Correct" id="10.B">
+        <label for="3.A">&lt;select&gt;</label><br>
+    <input type="radio" name="R10" value="10.C" id="10.C">
+        <label for="3.A">&lt;start&gt;</label><br> 
+        
 <input type="submit">  
    
-    
+    </form>
+          </div>
+        </div>        
+  <form action="resultat.php" method="post">
+<label for="name">Votre nom : </label><input type="text" name="name" id="name"><br>
+
+<label for="Q1">1. Comment ajouter une étiquette à un input ?</label>
+    <input type="radio" name="R1" value="1.A" id="1.A">
+        <label for="1.A">&lt;label&gt;</label><br>
+    <input type="radio" name="R1" value="Correct" id="1.B">
+        <label for="1.B">&lt;label for="element_id"&gt;</label><br>
+    <input type="radio" name="R1" value="1.C" id="1.C">
+        <label for="1.C">&lt;label to="element_id"&gt;</label><br><hr>   
+<label for="Q2">2. Quelle balise permet d'envoyer un formulaire ?</label>
+    <input type="radio" name="R2" value="Correct" id="2.A">
+        <label for="2.A">&lt;input type="submit"&gt;</label><br>
+    <input type="radio" name="R2" value="2.B" id="2.B">
+        <label for="2.B">&lt;button type="submit"&gt;&lt;/button&gt;</label><br>
+    <input type="radio" name="R2" value="2.C" id="2.C">
+        <label for="2.C">&lt;send&gt;</label><br><hr>    
+<label for="Q3">3. Dans quoi définit-on les déclarations CSS ?</label>
+    <input type="radio" name="R3" value="3.A" id="3.A">
+        <label for="3.A">Entre deux crochets sépareés par des tirets [ ... - ... ]</label><br>
+    <input type="radio" name="R3" value="3.B" id="3.B">
+        <label for="3.B">Entre deux guillemets séparées par des slashs " ... / ... "</label><br>
+    <input type="radio" name="R3" value="Correct" id="3.C">
+        <label for="3.C">Entre deux accolades séparés par des points-virgules { ... ; ... }</label><br><hr>  
+<label for="Q4">4. Comment indique-t-on un commentaire en PHP?</label>
+    <input type="radio" name="R4" value="Correct" id="4.A">
+        <label for="3.A">// Ceci est un commentaire</label><br>
+    <input type="radio" name="R4" value="4.B" id="4.B">
+        <label for="3.A">* Ceci est un commentaire *</label><br>
+    <input type="radio" name="R4" value="4.C" id="4.C">
+        <label for="3.A">*/ Ceci est un commentaire /*</label><br><hr>
+<label for="Q5">5. Le code PHP doit se trouver à l'intérieur de balises spécifiques. Lesquelles?</label>
+    <input type="radio" name="R5" value="5.A" id="5.A">
+        <label for="3.A">&lt;?php&gt;...&lt;/?&gt;</label><br>
+    <input type="radio" name="R5" value="5.B" id="5.B">
+        <label for="3.A">&lt;script&gt;...&lt;/script&gt;</label><br>
+    <input type="radio" name="R5" value="Correct" id="5.C">
+        <label for="3.A">&lt;?php ... ?&gt;</label><br><hr>
+<label for="Q6">6. A quoi sert le langage CSS ?</label>
+    <input type="radio" name="R6" value="6.A" id="6.A">
+        <label for="3.A">A réaliser des pages dynamiques</label><br>
+    <input type="radio" name="R6" value="Correct" id="6.B">
+        <label for="3.A">A ajouter du style aux documents web</label><br>
+    <input type="radio" name="R6" value="6.C" id="6.C">
+        <label for="3.A">A insérer du contenu dans une page internet</label><br><hr>
+<label for="Q7">7. Que signifie CSS ?</label>
+    <input type="radio" name="R7" value="Correct" id="7.A">
+        <label for="3.A">Cascading Style Sheets</label><br>
+    <input type="radio" name="R7" value="7.B" id="7.B">
+        <label for="3.A">Create Simple Samples</label><br>
+    <input type="radio" name="R7" value="7.C" id="7.C">
+        <label for="3.A">Choucroute et Saucisses d'Alsace</label><br><hr>
+<label for="Q8">8. Dans le cas d'envoi d'informations plus ou moins sensibles par formulaire, quelle méthode utilisera-t-on de préférence ?</label>
+    <input type="radio" name="R8" value="8.A" id="8.A">
+        <label for="3.A">get</label><br>
+    <input type="radio" name="R8" value="8.B" id="8.B">
+        <label for="3.A">mailto</label><br>
+    <input type="radio" name="R8" value="Correct" id="8.C">
+        <label for="3.A">post</label><br><hr>                    
+<label for="Q9">9. Quelle est la bonne proposition pour demander le sexe d'un personne ?</label>
+    <input type="radio" name="R9" value="Correct" id="9.A">
+        <label for="3.A">&lt;input type="radio"&gt;</label><br>
+    <input type="radio" name="R9" value="9.B" id="9.B">
+        <label for="3.A">&lt;input type="checkbox"&gt;</label><br>
+    <input type="radio" name="R9" value="9.C" id="9.C">
+        <label for="3.A">&lt;select&gt;</label><br><hr>
+<label for="Q10">10. Quelle balise permet de faire une liste deroulante ?</label>
+    <input type="radio" name="R10" value="10.A" id="10.A">
+        <label for="3.A">&lt;input&gt;</label><br>
+    <input type="radio" name="R10" value="Correct" id="10.B">
+        <label for="3.A">&lt;select&gt;</label><br>
+    <input type="radio" name="R10" value="10.C" id="10.C">
+        <label for="3.A">&lt;start&gt;</label><br> 
+        
+<input type="submit">  
+   
+    </form> 
+</div>
+       
 </body>
 </html>
